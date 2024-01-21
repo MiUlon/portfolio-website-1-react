@@ -1,7 +1,14 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import './icons.styles.scss';
 
 const Icons = () => {
+    const [activeClass, setActiveClass] = useState('active');
+    const [activeClass1, setActiveClass1] = useState('');
+    const [activeClass2, setActiveClass2] = useState('');
+    const [activeClass3, setActiveClass3] = useState('');
+    const [activeClass4, setActiveClass4] = useState('');
+    const [activeClass5, setActiveClass5] = useState('');
+
     const [classValue, setClassValue] = useState('active-btn');
     const [classValue1, setClassValue1] = useState('');
     const [classValue2, setClassValue2] = useState('');
@@ -17,7 +24,16 @@ const Icons = () => {
         setClassValue4('');
         setClassValue5('');
 
-        setClassValue1('active-btn');    
+        setClassValue1('active-btn');
+
+        setActiveClass('');
+        setActiveClass1('');
+        setActiveClass2('');
+        setActiveClass3('');
+        setActiveClass4('');
+        setActiveClass5('');
+
+        setActiveClass1('active');
     };
 
     const changeClassOnClick2 = () => {
@@ -28,7 +44,16 @@ const Icons = () => {
         setClassValue4('');
         setClassValue5('');
 
-        setClassValue2('active-btn');    
+        setClassValue2('active-btn');
+
+        setActiveClass('');
+        setActiveClass1('');
+        setActiveClass2('');
+        setActiveClass3('');
+        setActiveClass4('');
+        setActiveClass5('');
+
+        setActiveClass2('active');
     };
 
     const changeClassOnClick3 = () => {
@@ -39,7 +64,16 @@ const Icons = () => {
         setClassValue4('');
         setClassValue5('');
 
-        setClassValue3('active-btn');    
+        setClassValue3('active-btn');
+
+        setActiveClass('');
+        setActiveClass1('');
+        setActiveClass2('');
+        setActiveClass3('');
+        setActiveClass4('');
+        setActiveClass5('');
+
+        setActiveClass3('active');
     };
 
     const changeClassOnClick4 = () => {
@@ -50,7 +84,16 @@ const Icons = () => {
         setClassValue4('');
         setClassValue5('');
 
-        setClassValue4('active-btn');    
+        setClassValue4('active-btn');
+
+        setActiveClass('');
+        setActiveClass1('');
+        setActiveClass2('');
+        setActiveClass3('');
+        setActiveClass4('');
+        setActiveClass5('');
+
+        setActiveClass4('active');
     };
 
     const changeClassOnClick5 = () => {
@@ -61,27 +104,45 @@ const Icons = () => {
         setClassValue4('');
         setClassValue5('');
 
-        setClassValue5('active-btn');    
+        setClassValue5('active-btn');
+
+        setActiveClass('');
+        setActiveClass1('');
+        setActiveClass2('');
+        setActiveClass3('');
+        setActiveClass4('');
+        setActiveClass5('');
+        
+        setActiveClass5('active');
     };
 
     return (
-        <div className='controls'>
-            <div className={`control control-1 ${classValue} ${classValue1}`} onClick={changeClassOnClick1}>
-                <i className="fa-solid fa-house"></i>
+        <Fragment>
+            <div className={`header section sec1 ${activeClass} ${activeClass1}`}></div>
+            <div>
+                <div className={`section sec2 about ${activeClass2}`}></div>
+                <div className={`section sec3 about ${activeClass3}`}></div>
+                <div className={`section sec4 about ${activeClass4}`}></div>
+                <div className={`section sec5 about ${activeClass5}`}></div>
             </div>
-            <div className={`control control-2 ${classValue2}`} onClick={changeClassOnClick2}>
-                <i className="fa-solid fa-user"></i>
+            <div className='controls'>
+                <div className={`control control-1 ${classValue} ${classValue1}`} onClick={changeClassOnClick1}>
+                    <i className="fa-solid fa-house"></i>
+                </div>
+                <div className={`control control-2 ${classValue2}`} onClick={changeClassOnClick2}>
+                    <i className="fa-solid fa-user"></i>
+                </div>
+                <div className={`control control-3 ${classValue3}`} onClick={changeClassOnClick3}>
+                    <i className="fa-solid fa-suitcase"></i>
+                </div>
+                <div className={`control control-4 ${classValue4}`} onClick={changeClassOnClick4}>
+                    <i className="fa-solid fa-newspaper"></i>
+                </div>
+                <div className={`control control-5' ${classValue5}`} onClick={changeClassOnClick5}>
+                    <i className="fa-solid fa-address-book"></i>
+                </div>
             </div>
-            <div className={`control control-3 ${classValue3}`} onClick={changeClassOnClick3}>
-                <i className="fa-solid fa-suitcase"></i>
-            </div>
-            <div className={`control control-4 ${classValue4}`} onClick={changeClassOnClick4}>
-                <i className="fa-solid fa-newspaper"></i>
-            </div>
-            <div className={`control control-5' ${classValue5}`} onClick={changeClassOnClick5}>
-                <i className="fa-solid fa-address-book"></i>
-            </div>
-        </div>
+        </Fragment>
     );
 };
 
