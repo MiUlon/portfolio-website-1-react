@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react';
+import HeroImage from '../../assets/hero.png';
 import './icons.styles.scss';
 
 const Icons = () => {
@@ -118,7 +119,30 @@ const Icons = () => {
 
     return (
         <Fragment>
-            <div className={`header section sec1 ${activeClass} ${activeClass1}`}></div>
+            <div className={`header section sec1 ${activeClass} ${activeClass1}`}>
+            <div className='header-content'>
+                <div className='left-header'>
+                    <div className='h-shape'></div>
+                    <div className='image'>
+                        <img src={HeroImage} alt="hero" />
+                    </div>
+                </div>
+                <div className='right-container'>
+                    <h1 className='name'>
+                        Hi! I'm <span>Vardis Pavardis</span>.
+                        A Web Developer.
+                    </h1>
+                    <p>
+                        I love to create beautiful and functional websites.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis dolore deleniti voluptatem cum mollitia atque aspernatur hic, voluptates nisi doloribus? Voluptatum expedita accusamus earum. Ab laboriosam aut alias accusamus eaque?
+                    </p>
+                    <a href="" className='main-btn'>
+                        <span className='btn-text'>Download CV</span>
+                        <span className='btn-icon'><i className='fas fa-download'></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
             <div>
                 <div className={`section sec2 about ${activeClass2}`}></div>
                 <div className={`section sec3 about ${activeClass3}`}></div>
