@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react';
 import HeroImage from '../../assets/hero.png';
-import './icons.styles.scss';
+// import './icons.styles.scss';
 
 const Icons = () => {
     const [activeClass, setActiveClass] = useState('active');
@@ -127,7 +127,7 @@ const Icons = () => {
                         <img src={HeroImage} alt="hero" />
                     </div>
                 </div>
-                <div className='right-container'>
+                <div className='right-header'>
                     <h1 className='name'>
                         Hi! I'm <span>Vardis Pavardis</span>.
                         A Web Developer.
@@ -136,10 +136,12 @@ const Icons = () => {
                         I love to create beautiful and functional websites.
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis dolore deleniti voluptatem cum mollitia atque aspernatur hic, voluptates nisi doloribus? Voluptatum expedita accusamus earum. Ab laboriosam aut alias accusamus eaque?
                     </p>
-                    <a href="" className='main-btn'>
-                        <span className='btn-text'>Download CV</span>
-                        <span className='btn-icon'><i className='fas fa-download'></i></span>
-                    </a>
+                    <div className="btn-container">
+                        <a href="" className='main-btn'>
+                            <span className='btn-text'>Download CV</span>
+                            <span className='btn-icon'><i className='fas fa-download'></i></span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
